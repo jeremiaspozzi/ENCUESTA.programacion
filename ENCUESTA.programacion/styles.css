@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    font-family: 'Georgia', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2495ff;
+    background-color: #ffffff;
+    color: #333;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.emoji {
+    font-size: 24px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2495ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #1e7ccc;
+    transform: scale(1.05);
+}
+
+#agradecimiento {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.radio-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.radio-options input[type="radio"] {
+    display: none;
+}
+
+.radio-options label {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.radio-options input[type="radio"]:checked + label {
+    background-color: #2495ff;
+    border-color: #2495ff;
+    color: white;
+}
+
+.radio-options input[type="radio"]:hover + label {
+    background-color: #ccc;
+    border-color: #777;
+}

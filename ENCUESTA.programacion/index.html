@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de satisfacción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Encuesta de Satisfacción - MAQUINAR</h2>
+    <form id="surveyForm" action="http://127.0.0.1:5000/guardar_encuesta" method="POST">
+        <!-- Preguntas de la encuesta -->
+        <div class="question">
+            <label for="conocimiento">1. ¿Por dónde nos conociste?</label>
+            <input type="text" id="conocimiento" name="conocimiento" placeholder="Escribe aquí" aria-label="¿Por dónde nos conociste?">
+        </div>
+
+        <div class="question">
+            <label for="atencion">2. ¿Cómo fue la atención del Gestor Comercial?</label>
+            <input type="range" id="atencion" name="atencion" min="1" max="5" value="3" aria-label="¿Cómo fue la atención del Gestor Comercial?">
+            <span class="emoji" id="emojiAtencion"></span>
+        </div>
+
+        <div class="question">
+            <fieldset>
+                <legend>3. ¿Qué te pareció el equipo?</legend>
+                <div class="radio-options" id="equipoOptions">
+                    <input type="radio" id="muyMalo" name="equipo" value="1" aria-label="1 - Muy malo">
+                    <label for="muyMalo">1 - Muy malo</label>
+
+                    <input type="radio" id="regular" name="equipo" value="2" aria-label="2 - Regular">
+                    <label for="regular">2 - Regular</label>
+
+                    <input type="radio" id="bueno" name="equipo" value="3" checked aria-label="3 - Bueno">
+                    <label for="bueno">3 - Bueno</label>
+
+                    <input type="radio" id="muyBueno" name="equipo" value="4" aria-label="4 - Muy bueno">
+                    <label for="muyBueno">4 - Muy bueno</label>
+
+                    <input type="radio" id="excelente" name="equipo" value="5" aria-label="5 - Excelente">
+                    <label for="excelente">5 - Excelente</label>
+                </div>
+                <span class="emoji" id="emojiGrupo"></span>
+            </fieldset>
+        </div>
+
+        <div class="question">
+            <label for="opinion">4. ¿Qué te pareció Maquinar? (Opinión/ Recomendaciones/ Mejoras)</label>
+            <textarea id="opinion" name="opinion" placeholder="Escribe aquí" aria-label="¿Qué te pareció Maquinar? (Opinión/ Recomendaciones/ Mejoras)"></textarea>
+        </div>
+
+        <div class="question">
+            <fieldset>
+                <legend>5. ¿Nos tendrías presente para futuros negocios?</legend>
+                <div class="radio-options" id="futurosNegociosOptions">
+                    <input type="radio" id="si" name="futurosNegocios" value="Sí" checked aria-label="Sí">
+                    <label for="si">Sí</label>
+
+                    <input type="radio" id="no" name="futurosNegocios" value="No" aria-label="No">
+                    <label for="no">No</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="question">
+            <label for="recomendacion">6. ¿Tendrías algún conocido al cual le podría interesar Maquinar para recomendarnos? (Nombre, Apellido)</label>
+            <input type="text" id="recomendacion" name="recomendacion" placeholder="Escribe aquí" aria-label="Nombre y apellido">
+            <label for="telefono">Número de contacto:</label>
+            <input type="text" id="telefono" name="telefono" placeholder="Escribe aquí" aria-label="Número de contacto">
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Elemento de agradecimiento oculto -->
+    <div id="agradecimiento" class="hidden">
+        <h2>¡Gracias por completar la encuesta!</h2>
+        <p>Agradecemos sinceramente tu tiempo y tus respuestas. Tu opinión es muy valiosa para nosotros.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
